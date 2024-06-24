@@ -2,6 +2,7 @@ package com.ps.dealership_api_starter.data.mysql;
 
 import com.ps.dealership_api_starter.data.DealershipDao;
 import com.ps.dealership_api_starter.models.Dealership;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
@@ -168,5 +169,13 @@ public class MySqlDealershipDao extends MySqlDaoBase implements DealershipDao {
         String phone = row.getString("phone");
 
         return new Dealership(dealershipId, name, address, phone);
+
+
     }
+
+
 }
+
+
+
+

@@ -1,100 +1,115 @@
 package com.ps.dealership_api_starter.models;
 
 public class Vehicle {
-    private int vin;
-    private int year;
-    private String make;
-    private String model;
-    private String vehicleType;
-    private String color;
-    private int odometer;
-    private double price;
-    private boolean sold;
+    private double minPrice;
+    private double maxPrice;
 
-    public Vehicle() {
+    private String Make;
+    private String Model;
+
+    private int minYear;
+
+    private int maxYear;
+
+    private String Color;
+
+    private String type;
+
+    private int Vin;
+
+    public Vehicle(double minPrice, double maxPrice, String make, String model, int minYear,
+                   int maxYear, String color, String type, int vin) {
+        this.minPrice = minPrice;
+        this.maxPrice = maxPrice;
+        Make = make;
+        Model = model;
+        this.minYear = minYear;
+        this.maxYear = maxYear;
+        Color = color;
+        this.type = type;
+        Vin = vin;
     }
 
-    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price, boolean sold) {
-        this.vin = vin;
-        this.year = year;
-        this.make = make;
-        this.model = model;
-        this.vehicleType = vehicleType;
-        this.color = color;
-        this.odometer = odometer;
-        this.price = price;
-        this.sold = sold;
+    public Vehicle(Integer vin, Integer year, String make, String model, String vehicleType, String color, Integer odometer, Double price, Boolean sold) {
     }
 
-    public int getVin() {
-        return vin;
+    public Vehicle(Integer vin, Integer year, String make, String model, 
+                   String vehicleType, String color,  Double minPrice, Double maxPrice, String type) {
+        
     }
 
-    public void setVin(int vin) {
-        this.vin = vin;
+    public Vehicle(Integer vin, Integer year, String make, String model, String s, String color, Double minPrice, Double maxPrice) {
     }
 
-    public int getYear() {
-        return year;
+    public double getMinPrice() {
+        return minPrice;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setMinPrice(double minPrice) {
+        this.minPrice = minPrice;
+    }
+
+    public double getMaxPrice() {
+        return maxPrice;
+    }
+
+    public void setMaxPrice(double maxPrice) {
+        this.maxPrice = maxPrice;
     }
 
     public String getMake() {
-        return make;
+        return Make;
     }
 
     public void setMake(String make) {
-        this.make = make;
+        Make = make;
     }
 
     public String getModel() {
-        return model;
+        return Model;
     }
 
     public void setModel(String model) {
-        this.model = model;
+        Model = model;
     }
 
-    public String getVehicleType() {
-        return vehicleType;
+    public int getMinYear() {
+        return minYear;
     }
 
-    public void setVehicleType(String vehicleType) {
-        this.vehicleType = vehicleType;
+    public void setMinYear(int minYear) {
+        this.minYear = minYear;
+    }
+
+    public int getMaxYear() {
+        return maxYear;
+    }
+
+    public void setMaxYear(int maxYear) {
+        this.maxYear = maxYear;
     }
 
     public String getColor() {
-        return color;
+        return Color;
     }
 
     public void setColor(String color) {
-        this.color = color;
+        Color = color;
     }
 
-    public int getOdometer() {
-        return odometer;
+    public String getType() {
+        return type;
     }
 
-    public void setOdometer(int odometer) {
-        this.odometer = odometer;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public double getPrice() {
-        return price;
+    public int getVin() {
+        return Vin;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public boolean isSold() {
-        return sold;
-    }
-
-    public void setSold(boolean sold) {
-        this.sold = sold;
+    public void setVin(int vin) {
+        Vin = vin;
     }
 }
